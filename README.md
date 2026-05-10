@@ -1,84 +1,104 @@
-# Music and Library management system
+# 🎵 MyAudio – Music & Library Management System
 
-MyAudio is an audio content management application that allows users to organize and manage their songs, audiobooks, podcasts, and playlists. This README provides an overview of the program's structure, functionality, and recent modifications based on the assignment requirements.
+A text-based Java application simulating a music platform (think Spotify or Apple Music) — browse an online store, download songs and audiobooks to your personal library, manage playlists, and search by title, artist, genre, or partial keyword.
 
-## Program Structure
+---
 
-The program is organized into several classes, each serving a specific purpose:
+## 📌 Overview
 
-1. **Library:**
-   - Contains logic for managing audio content (songs, audiobooks, podcasts, playlists).
-   - Methods for adding, removing, and manipulating audio content.
+MyAudio models a real-world audio content ecosystem using core OOP principles: inheritance, polymorphism, abstract classes, and custom exceptions. Users interact via a command-line interface to manage their personal audio library.
 
-2. **MyAudioUI:**
-   - Main class with the user interface for interacting with the application.
-   - Reads user actions and invokes corresponding methods in Library and AudioContentStore classes.
+---
 
-3. **AudioContent:**
-   - Superclass for various audio content types (e.g., Song, Audiobook).
-   - Contains common instance variables and methods for audio content.
+## 🗂️ Project Structure
 
-4. **AudioContentStore:**
-   - Simulates an online store for audio content.
-   - Predefined audio content and methods for listing store contents and downloading content to the library.
+| Class | Role |
+|---|---|
+| `AudioContent` | Abstract base class for all audio types — holds title, year, ID, length |
+| `Song` | Extends `AudioContent` — adds artist, composer, genre, lyrics |
+| `AudioBook` | Extends `AudioContent` — adds author, narrator, chapters |
+| `Playlist` | Manages a named collection of mixed audio content |
+| `Library` | Core logic — stores songs, audiobooks, playlists; handles download, sort, play, delete |
+| `AudioContentStore` | Simulates an online store; reads from `store.txt`; supports search by title/artist/genre |
+| `MyAudioUI` | Entry point — reads keyboard commands and delegates to Library/Store |
 
-5. **Song:**
-   - Subclass of AudioContent specific to songs.
-   - Includes artist name, composer, genre, and lyrics.
+---
 
-6. **Audiobook:**
-   - Subclass of AudioContent specific to audiobooks.
-   - Includes author, narrator, chapters, and chapter contents.
+## ⚙️ Features
 
-7. **Playlist:**
-   - Manages playlists and associated audio content.
-   - Methods to create, modify, and play playlists.
+**Library Management**
+- Download songs and audiobooks from the store (single or range)
+- Delete songs from the library and any playlists they belong to
+- List all songs, audiobooks, artists, or playlists
 
-8. **Podcast:**
-   - Bonus subclass of AudioContent for podcasts.
-   - Includes host, seasons, and episode details.
+**Playback**
+- Play a song by library index
+- Play a specific chapter of an audiobook
+- Play one item or all items in a playlist
 
-## Functionality
+**Playlists**
+- Create playlists, add/remove content, print contents
 
-The program offers the following functionalities:
+**Search (Store)**
+- `SEARCH` — exact title match
+- `SEARCHA` — by artist name
+- `SEARCHG` — by genre (POP, ROCK, JAZZ, HIPHOP, RAP, CLASSICAL)
+- `SEARCHP` — partial keyword match across title, artist, composer, lyrics
 
-- Manage audio content in a library.
-- Interact with an online store to view and download audio content.
-- Create, modify, and play playlists.
-- Search for audio content by title, artist, genre, or partial matches.
-- Play specific songs, audiobooks, or podcast episodes.
+**Bulk Download**
+- `DOWNLOADA` — download all content by a specific artist
+- `DOWNLOADG` — download all songs of a specific genre
 
-## Recent Modifications and Additions
+**Sorting**
+- Sort library songs by year, name (alphabetical), or length
 
-1. **Enhanced Search Functionality:**
-   - Added actions: SEARCH, SEARCHA, SEARCHG to search for audio content by title, artist, or genre.
-   - Improved search capabilities using maps for efficient search operations.
+---
 
-2. **Flexible Download:**
-   - Modified the DOWNLOAD action to support downloading a range of songs/books from the store.
-   - Added DOWNLOADA action to download all audio content by a specific artist.
-   - Added DOWNLOADG action to download all songs of a specific genre.
+## 🧠 Key Concepts Used
 
-3. **Exception Handling:**
-   - Replaced error message handling with custom exceptions for better error management.
-   - Catch exceptions in the MyAudioUI class and display appropriate error messages to the user.
+- **Inheritance & Polymorphism** — `Song` and `AudioBook` extend `AudioContent`
+- **Abstract Classes** — `AudioContent` defines the contract for subtypes
+- **Comparable & Comparator** — used for sorting songs
+- **Custom Exceptions** — `AlreadyDownloaded`, `AlreadyExists`, `NotFound`, `NoMatchesException`
+- **HashMaps** — for O(1) lookup by title, artist, and genre
+- **File I/O** — store content loaded dynamically from `store.txt`
 
-4. **File I/O:**
-   - Implemented file reading functionality in AudioContentStore to populate the store with audio content from a file ("store.txt").
+---
 
-5. **Map Usage:**
-   - Utilized maps to enhance search capabilities based on title, artist, and genre.
+## ▶️ How to Run
 
-6. **Bonus Functionality:**
-   - Introduced SEARCHP action for partial matches in audio content.
+**1. Compile**
+```bash
+javac MyAudioUI.java
+```
 
-## Usage
+**2. Run**
+```bash
+java MyAudioUI
+```
 
-To run the MyAudio app:
-1. Compile the Java files.
-   (javac MyAudioUI.java Library.java AudioContent.java AudioContentStore.java)
-2. Run the MyAudioUI class.
-   (java MyAudioUI)
-3. Follow the on-screen prompts to interact with the application and utilize its features.
+> Make sure `store.txt` is in the same directory before running.
 
+**3. Example Commands**
+```
+STORE        → list all content in the store
+DOWNLOAD     → download by index range
+SONGS        → list your library songs
+PLAYSONG     → play a song by index
+MAKEPL       → create a playlist
+ADDTOPL      → add content to a playlist
+SEARCH       → search store by title
+SEARCHA      → search by artist
+SEARCHG      → search by genre
+SORTBYNAME   → sort songs alphabetically
+Q            → quit
+```
 
+---
+
+## 🛠️ Tech Stack
+
+- Java
+- OOP (Inheritance, Polymorphism, Abstract Classes)
+- Java Collections (ArrayList, HashMap)
+- Java File I/O (Scanner + File)

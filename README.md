@@ -65,6 +65,27 @@ MyAudio models a real-world audio content ecosystem using core OOP principles: i
 
 ---
 
+## 📥 Setup
+
+**Clone the repository**
+```bash
+git clone https://github.com/Ansh2609/MyAudio-Library-Management.git
+cd MyAudio-Library-Management
+```
+
+**Required Files**
+Make sure all of the following are in the same directory:
+- `MyAudioUI.java`
+- `Library.java`
+- `AudioContent.java`
+- `AudioContentStore.java`
+- `Song.java`
+- `AudioBook.java`
+- `Playlist.java`
+- `store.txt` ← the store data file (must be present or the app won't load)
+
+---
+
 ## ▶️ How to Run
 
 **1. Compile**

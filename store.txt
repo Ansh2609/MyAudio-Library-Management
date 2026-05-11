@@ -1,0 +1,112 @@
+SONG
+S001
+Blinding Lights
+2019 200
+The Weeknd
+Max Martin
+POP
+4
+I've been tryna call
+I've been on my own for long enough
+Maybe you can show me what it's like
+Are you out there looking for me
+SONG
+S002
+HUMBLE.
+2017 177
+Kendrick Lamar
+Kendrick Lamar
+RAP
+4
+Sit down be humble
+Sit down be humble
+Nobody pray for me
+It's been that day for me
+SONG
+S003
+Bohemian Rhapsody
+1975 354
+Queen
+Freddie Mercury
+ROCK
+5
+Is this the real life
+Is this just fantasy
+Caught in a landslide
+No escape from reality
+Open your eyes look up to the skies and see
+SONG
+S004
+So What
+1959 270
+Miles Davis
+Miles Davis
+JAZZ
+3
+A cool breeze blows through the night
+The trumpet calls out to the stars
+Jazz fills the empty room
+SONG
+S005
+Lose Yourself
+2002 326
+Eminem
+Eminem
+HIPHOP
+4
+Look if you had one shot one opportunity
+To seize everything you ever wanted
+Would you capture it or just let it slip
+His palms are sweaty knees weak arms are heavy
+AUDIOBOOK
+AB001
+The Art of War
+500 240
+Sun Tzu
+John Smith
+3
+The Art of War
+Strategic Planning
+Victory and Defeat
+8
+The supreme art of war is to subdue the enemy without fighting
+All warfare is based on deception
+Hence when able to attack we must seem unable
+When using our forces we must seem inactive
+When we are near we must make the enemy believe we are far away
+When far away we must make him believe we are near
+Hold out baits to entice the enemy
+Feign disorder and crush him
+5
+Strategy without tactics is the slowest route to victory
+Tactics without strategy is the noise before defeat
+Plan for what is difficult while it is easy
+Do what is great while it is small
+The greatest victory is that which requires no battle
+6
+In the midst of chaos there is also opportunity
+Supreme excellence consists in breaking the enemy's resistance without fighting
+The skillful soldier does not raise a second levy
+He carries military supplies from the country
+The clever combatant looks to the effect of combined energy
+Thus the energy developed by good fighting men is as the momentum of a round stone
+AUDIOBOOK
+AB002
+The Great Gatsby
+1925 300
+F. Scott Fitzgerald
+James Earl Jones
+2
+The Valley of Ashes
+The Green Light
+4
+In my younger and more vulnerable years my father gave me some advice
+He told me whenever you feel like criticizing anyone just remember
+That all the people in this world haven't had the advantages that you've had
+I've been turning it over in my mind ever since
+5
+So we drove on toward death through the cooling twilight
+Gatsby believed in the green light the orgastic future that year by year recedes before us
+It eluded us then but that's no matter
+Tomorrow we will run faster stretch out our arms farther
+And one fine morning so we beat on boats against the current borne back ceaselessly into the past
